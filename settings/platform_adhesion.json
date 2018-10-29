@@ -1,0 +1,221 @@
+{
+	"platform_adhesion":
+	{
+    	"children":
+    	{
+    	    "prime_blob_enable":
+    	    {
+    	        "default_value": true
+    	    },
+    	    "extruder_prime_pos_x":
+    	    {
+    	        "default_value": 0
+    	    },
+    	    "extruder_prime_pos_y":
+    	    {
+    	        "default_value": 0
+    	    },
+    	    "adhesion_type":
+    	    {
+    	        "default_value": "brim"
+    	    },
+    	    "adhesion_extruder_nr":
+    	    {
+    	        "default_value": "0"
+    	    },
+    	    "skirt_line_count":
+    	    {
+    	        "default_value": 1
+    	    },
+    	    "skirt_gap":
+    	    {
+    	        "default_value": 3
+    	    },
+    	    "skirt_brim_minimal_length":
+    	    {
+    	        "default_value": 250
+    	    },
+    	    "brim_width":
+    	    {
+            	"default_value": 8.0,
+            	"children":
+            	{
+            	    "brim_line_count":
+            	    {
+            	        "default_value": 20,
+            	        "value": "math.ceil(brim_width / (skirt_brim_line_width * initial_layer_line_width_factor / 100.0))"
+            	    }
+            	}
+            },
+            "brim_outside_only":
+            {
+                "default_value": true
+            },
+            "z_offset_layer_0":
+            {
+                "default_value": 0
+            },
+            "z_offset_taper_layers":
+            {
+                "default_value": 0
+            },
+            "raft_margin":
+            {
+                "default_value": 15
+            },
+            "raft_smoothing":
+            {
+                "default_value": 5
+            },
+            "raft_airgap":
+            {
+                "default_value": 0.3
+            },
+            "layer_0_z_overlap":
+            {
+                "default_value": 0.22,
+                "value": "raft_airgap / 2"
+            },
+            "raft_surface_layers":
+            {
+                "default_value": 2
+            },
+            "raft_surface_thickness":
+            {
+                "default_value": 0.1,
+                "value": "resolveOrValue('layer_height')"
+            },
+            "raft_surface_line_width":
+            {
+                "default_value": 0.4,
+                "value": "line_width"
+            },
+            "raft_surface_line_spacing":
+            {
+                "default_value": 0.4,
+                "value": "raft_surface_line_width"
+            },
+            "raft_interface_thickness":
+            {
+                "default_value": 0.15,
+                "value": "resolveOrValue('layer_height') * 1.5"
+            },
+            "raft_interface_line_width":
+            {
+                "default_value": 0.7,
+                "value": "line_width * 2"
+            },
+            "raft_interface_line_spacing":
+            {
+                "default_value": 0.9,
+                "value": "raft_interface_line_width + 0.2"
+            },
+            "raft_base_thickness":
+            {
+                "default_value": 0.3,
+                "value": "resolveOrValue('layer_height_0') * 1.2"
+            },
+            "raft_base_line_width":
+            {
+                "default_value": 0.8,
+                "value": "machine_nozzle_size * 2"
+            },
+            "raft_base_line_spacing":
+            {
+                "default_value": 1.6,
+                "value": "raft_base_line_width * 2"
+            },
+            "raft_speed":
+            {
+                "default_value": 20,
+                "value": "speed_print / 60 * 30",
+                "children":
+                {
+                    "raft_surface_speed":
+                    {
+                        "default_value": 20,
+                        "value": "raft_speed"
+                    },
+                    "raft_interface_speed":
+                    {
+                        "default_value": 15,
+                        "value": "raft_speed * 0.75"
+                    },
+                    "raft_base_speed":
+                    {
+                        "default_value": 15,
+                        "value": "0.75 * raft_speed"
+                    }
+                }
+            },
+            "raft_acceleration":
+            {
+                "default_value": 3000,
+                "value": "acceleration_print",
+                "children":
+                {
+                    "raft_surface_acceleration":
+                    {
+                        "default_value": 3000,
+                        "value": "raft_acceleration"
+                    },
+                    "raft_interface_acceleration":
+                    {
+                        "default_value": 3000,
+                        "value": "raft_acceleration"
+                    },
+                    "raft_base_acceleration":
+                    {
+                        "default_value": 3000,
+                        "value": "raft_acceleration"
+                    }
+                }
+            },
+            "raft_jerk":
+            {
+                "default_value": 20,
+                "value": "jerk_print",
+                "children":
+                {
+                    "raft_surface_jerk":
+                    {
+                        "default_value": 20,
+                        "value": "raft_jerk"
+                    },
+                    "raft_interface_jerk":
+                    {
+                        "default_value": 20,
+                        "value": "raft_jerk"
+                    },
+                    "raft_base_jerk":
+                    {
+                        "default_value": 20,
+                        "value": "raft_jerk"
+                    }
+                }
+            },
+            "raft_fan_speed":
+            {
+                "default_value": 0,
+                "children":
+                {
+                    "raft_surface_fan_speed":
+                    {
+                        "default_value": 0,
+                        "value": "raft_fan_speed"
+                    },
+                    "raft_interface_fan_speed":
+                    {
+                        "default_value": 0,
+                        "value": "raft_fan_speed"
+                    },
+                    "raft_base_fan_speed":
+                    {
+                        "default_value": 0,
+                        "value": "raft_fan_speed"
+                    }
+                }
+            }
+        }
+    }
+}

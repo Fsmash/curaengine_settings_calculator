@@ -1,0 +1,70 @@
+{
+    "blackmagic":
+    {
+        "children":
+        {
+            "print_sequence":
+            {
+                "default_value": "all_at_once"
+            },
+            "infill_mesh":
+            {
+                "default_value": false
+            },
+            "infill_mesh_order":
+            {
+                "default_value": 0,
+                "value": "1 if infill_mesh else 0"
+            },
+            "cutting_mesh":
+            {
+                "default_value": false
+            },
+            "mold_enabled":
+            {
+                "default_value": false
+            },
+            "mold_width":
+            {
+                "default_value": 5
+            },
+            "mold_roof_height":
+            {
+                "default_value": 0.5
+            },
+            "mold_angle":
+            {
+                "default_value": 40
+            },
+            "support_mesh":
+            {
+                "default_value": false
+            },
+            "support_mesh_drop_down":
+            {
+                "default_value": true
+            },
+            "anti_overhang_mesh":
+            {
+                "default_value": false
+            },
+            "magic_mesh_surface_mode":
+            {
+                "default_value": "normal"
+            },
+            "magic_spiralize":
+            {
+                "default_value": false
+            },
+            "smooth_spiralized_contours":
+            {
+                "default_value": true
+            },
+            "relative_extrusion":
+            {
+                "default_value": false,
+                "value": "machine_gcode_flavor==\"RepRap (RepRap)\""
+            }
+        }
+    }
+}

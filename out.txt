@@ -1,0 +1,238 @@
+jerk_skirt_brim has default_value=
+20
+jerk_skirt_brim has value=
+jerk_layer_0
+speed_print has default_value=
+60
+speed_print has children
+speed_support has default_value=
+60
+speed_support has value=
+speed_print
+speed_support has children
+speed_support_infill has default_value=
+60
+speed_support_infill has value=
+speed_support
+speed_support_interface has default_value=
+40
+speed_support_interface has value=
+speed_support / 1.5
+speed_support_interface has children
+speed_support_roof has default_value=
+40
+speed_support_roof has value=
+extruderValue(support_roof_extruder_nr, 'speed_support_interface')
+speed_support_bottom has default_value=
+40
+speed_support_bottom has value=
+extruderValue(support_bottom_extruder_nr, 'speed_support_interface')
+speed_prime_tower has default_value=
+60
+speed_prime_tower has value=
+speed_print
+speed_topbottom has default_value=
+30
+speed_topbottom has value=
+speed_print / 2
+speed_infill has default_value=
+60
+speed_infill has value=
+speed_print
+speed_wall has default_value=
+30
+speed_wall has value=
+speed_print / 2
+speed_wall has children
+speed_wall_x has default_value=
+60
+speed_wall_x has value=
+speed_wall * 2
+speed_wall_0 has default_value=
+30
+speed_wall_0 has value=
+speed_wall
+speed_roofing has default_value=
+25
+speed_roofing has value=
+speed_topbottom
+acceleration_print has default_value=
+3000
+acceleration_print has children
+acceleration_wall has default_value=
+3000
+acceleration_wall has value=
+acceleration_print
+acceleration_wall has children
+acceleration_wall_x has default_value=
+3000
+acceleration_wall_x has value=
+acceleration_wall
+acceleration_wall_0 has default_value=
+3000
+acceleration_wall_0 has value=
+acceleration_wall
+acceleration_support has default_value=
+3000
+acceleration_support has value=
+acceleration_print
+acceleration_support has children
+acceleration_support_interface has default_value=
+3000
+acceleration_support_interface has value=
+acceleration_support
+acceleration_support_interface has children
+acceleration_support_bottom has default_value=
+3000
+acceleration_support_bottom has value=
+extruderValue(support_bottom_extruder_nr, 'acceleration_support_interface')
+acceleration_support_roof has default_value=
+3000
+acceleration_support_roof has value=
+extruderValue(support_roof_extruder_nr, 'acceleration_support_interface')
+acceleration_support_infill has default_value=
+3000
+acceleration_support_infill has value=
+acceleration_support
+acceleration_infill has default_value=
+3000
+acceleration_infill has value=
+acceleration_print
+acceleration_roofing has default_value=
+3000
+acceleration_roofing has value=
+acceleration_topbottom
+acceleration_prime_tower has default_value=
+3000
+acceleration_prime_tower has value=
+acceleration_print
+acceleration_topbottom has default_value=
+3000
+acceleration_topbottom has value=
+acceleration_print
+jerk_enabled has default_value=
+False
+speed_equalize_flow_enabled has default_value=
+False
+acceleration_travel has default_value=
+5000
+acceleration_travel has value=
+acceleration_print if magic_spiralize else 5000
+jerk_print has default_value=
+20
+jerk_print has children
+jerk_prime_tower has default_value=
+20
+jerk_prime_tower has value=
+jerk_print
+jerk_roofing has default_value=
+20
+jerk_roofing has value=
+jerk_topbottom
+jerk_wall has default_value=
+20
+jerk_wall has value=
+jerk_print
+jerk_wall has children
+jerk_wall_0 has default_value=
+20
+jerk_wall_0 has value=
+jerk_wall
+jerk_wall_x has default_value=
+20
+jerk_wall_x has value=
+jerk_wall
+jerk_topbottom has default_value=
+20
+jerk_topbottom has value=
+jerk_print
+jerk_support has default_value=
+20
+jerk_support has value=
+jerk_print
+jerk_support has children
+jerk_support_interface has default_value=
+20
+jerk_support_interface has value=
+jerk_support
+jerk_support_interface has children
+jerk_support_bottom has default_value=
+20
+jerk_support_bottom has value=
+extruderValue(support_roof_extruder_nr, 'jerk_support_interface')
+jerk_support_roof has default_value=
+20
+jerk_support_roof has value=
+extruderValue(support_roof_extruder_nr, 'jerk_support_interface')
+jerk_support_infill has default_value=
+20
+jerk_support_infill has value=
+jerk_support
+jerk_infill has default_value=
+20
+jerk_infill has value=
+jerk_print
+acceleration_skirt_brim has default_value=
+3000
+acceleration_skirt_brim has value=
+acceleration_layer_0
+acceleration_layer_0 has default_value=
+3000
+acceleration_layer_0 has value=
+acceleration_print
+acceleration_layer_0 has children
+acceleration_travel_layer_0 has default_value=
+3000
+acceleration_travel_layer_0 has value=
+acceleration_layer_0 * acceleration_travel / acceleration_print
+acceleration_print_layer_0 has default_value=
+3000
+acceleration_print_layer_0 has value=
+acceleration_layer_0
+max_feedrate_z_override has default_value=
+0
+skirt_brim_speed has default_value=
+30
+skirt_brim_speed has value=
+speed_layer_0
+jerk_layer_0 has default_value=
+20
+jerk_layer_0 has value=
+jerk_print
+jerk_layer_0 has children
+jerk_travel_layer_0 has default_value=
+20
+jerk_travel_layer_0 has value=
+jerk_layer_0 * jerk_travel / jerk_print
+jerk_print_layer_0 has default_value=
+20
+jerk_print_layer_0 has value=
+jerk_layer_0
+speed_slowdown_layers has default_value=
+2
+speed_travel has default_value=
+120
+speed_travel has value=
+speed_print if magic_spiralize else 120
+jerk_travel has default_value=
+30
+jerk_travel has value=
+jerk_print if magic_spiralize else 30
+speed_layer_0 has default_value=
+30
+speed_layer_0 has value=
+speed_print * 30 / 60
+speed_layer_0 has children
+speed_print_layer_0 has default_value=
+30
+speed_print_layer_0 has value=
+speed_layer_0
+speed_travel_layer_0 has default_value=
+60
+speed_travel_layer_0 has value=
+speed_layer_0 * speed_travel / speed_print
+speed_equalize_flow_max has default_value=
+150
+acceleration_enabled has default_value=
+False
+{'jerk_travel_layer_0': {'default_value': 20, 'value': 'jerk_layer_0 * jerk_travel / jerk_print'}, 'jerk_enabled': {'default_value': False, 'value': None}, 'speed_prime_tower': {'default_value': 60, 'value': 'speed_print'}, 'speed_support_infill': {'default_value': 60, 'value': 'speed_support'}, 'f': <_io.TextIOWrapper name='/home/bryant/Documents/work/settings_calculator/settings/speed.json' mode='r' encoding='UTF-8'>, 'acceleration_print_layer_0': {'default_value': 3000, 'value': 'acceleration_layer_0'}, 'jerk_topbottom': {'default_value': 20, 'value': 'jerk_print'}, 'acceleration_support_bottom': {'default_value': 3000, 'value': "extruderValue(support_bottom_extruder_nr, 'acceleration_support_interface')"}, 'acceleration_support_roof': {'default_value': 3000, 'value': "extruderValue(support_roof_extruder_nr, 'acceleration_support_interface')"}, 'jerk_prime_tower': {'default_value': 20, 'value': 'jerk_print'}, 'acceleration_travel_layer_0': {'default_value': 3000, 'value': 'acceleration_layer_0 * acceleration_travel / acceleration_print'}, 'speed_wall_x': {'default_value': 60, 'value': 'speed_wall * 2'}, 'acceleration_infill': {'default_value': 3000, 'value': 'acceleration_print'}, 'json': <module 'json' from '/usr/lib/python3.5/json/__init__.py'>, 'speed_travel': {'default_value': 120, 'value': 'speed_print if magic_spiralize else 120'}, 'load_settings': <function load_settings at 0x7f50ddf55378>, 'jerk_wall': {'default_value': 20, 'value': 'jerk_print'}, 'filepath': '/home/bryant/Documents/work/settings_calculator/settings/speed.json', 'acceleration_wall': {'default_value': 3000, 'value': 'acceleration_print'}, 'sys': <module 'sys' (built-in)>, 'speed_print': {'default_value': 60, 'value': None}, 'speed_travel_layer_0': {'default_value': 60, 'value': 'speed_layer_0 * speed_travel / speed_print'}, '__name__': '__main__', 'acceleration_prime_tower': {'default_value': 3000, 'value': 'acceleration_print'}, 'settings': {'jerk_skirt_brim': {'default_value': 20, 'value': 'jerk_layer_0'}, 'speed_print': {'children': {'speed_support': {'children': {'speed_support_infill': {'default_value': 60, 'value': 'speed_support'}, 'speed_support_interface': {'children': {'speed_support_roof': {'default_value': 40, 'value': "extruderValue(support_roof_extruder_nr, 'speed_support_interface')"}, 'speed_support_bottom': {'default_value': 40, 'value': "extruderValue(support_bottom_extruder_nr, 'speed_support_interface')"}}, 'default_value': 40, 'value': 'speed_support / 1.5'}}, 'default_value': 60, 'value': 'speed_print'}, 'speed_prime_tower': {'default_value': 60, 'value': 'speed_print'}, 'speed_topbottom': {'default_value': 30, 'value': 'speed_print / 2'}, 'speed_infill': {'default_value': 60, 'value': 'speed_print'}, 'speed_wall': {'children': {'speed_wall_x': {'default_value': 60, 'value': 'speed_wall * 2'}, 'speed_wall_0': {'default_value': 30, 'value': 'speed_wall'}}, 'default_value': 30, 'value': 'speed_print / 2'}, 'speed_roofing': {'default_value': 25, 'value': 'speed_topbottom'}}, 'default_value': 60}, 'acceleration_print': {'children': {'acceleration_wall': {'children': {'acceleration_wall_x': {'default_value': 3000, 'value': 'acceleration_wall'}, 'acceleration_wall_0': {'default_value': 3000, 'value': 'acceleration_wall'}}, 'default_value': 3000, 'value': 'acceleration_print'}, 'acceleration_support': {'children': {'acceleration_support_interface': {'children': {'acceleration_support_bottom': {'default_value': 3000, 'value': "extruderValue(support_bottom_extruder_nr, 'acceleration_support_interface')"}, 'acceleration_support_roof': {'default_value': 3000, 'value': "extruderValue(support_roof_extruder_nr, 'acceleration_support_interface')"}}, 'default_value': 3000, 'value': 'acceleration_support'}, 'acceleration_support_infill': {'default_value': 3000, 'value': 'acceleration_support'}}, 'default_value': 3000, 'value': 'acceleration_print'}, 'acceleration_infill': {'default_value': 3000, 'value': 'acceleration_print'}, 'acceleration_roofing': {'default_value': 3000, 'value': 'acceleration_topbottom'}, 'acceleration_prime_tower': {'default_value': 3000, 'value': 'acceleration_print'}, 'acceleration_topbottom': {'default_value': 3000, 'value': 'acceleration_print'}}, 'default_value': 3000}, 'jerk_enabled': {'default_value': False}, 'speed_equalize_flow_enabled': {'default_value': False}, 'acceleration_travel': {'default_value': 5000, 'value': 'acceleration_print if magic_spiralize else 5000'}, 'jerk_print': {'children': {'jerk_prime_tower': {'default_value': 20, 'value': 'jerk_print'}, 'jerk_roofing': {'default_value': 20, 'value': 'jerk_topbottom'}, 'jerk_wall': {'children': {'jerk_wall_0': {'default_value': 20, 'value': 'jerk_wall'}, 'jerk_wall_x': {'default_value': 20, 'value': 'jerk_wall'}}, 'default_value': 20, 'value': 'jerk_print'}, 'jerk_topbottom': {'default_value': 20, 'value': 'jerk_print'}, 'jerk_support': {'children': {'jerk_support_interface': {'children': {'jerk_support_bottom': {'default_value': 20, 'value': "extruderValue(support_roof_extruder_nr, 'jerk_support_interface')"}, 'jerk_support_roof': {'default_value': 20, 'value': "extruderValue(support_roof_extruder_nr, 'jerk_support_interface')"}}, 'default_value': 20, 'value': 'jerk_support'}, 'jerk_support_infill': {'default_value': 20, 'value': 'jerk_support'}}, 'default_value': 20, 'value': 'jerk_print'}, 'jerk_infill': {'default_value': 20, 'value': 'jerk_print'}}, 'default_value': 20}, 'acceleration_skirt_brim': {'default_value': 3000, 'value': 'acceleration_layer_0'}, 'acceleration_layer_0': {'children': {'acceleration_travel_layer_0': {'default_value': 3000, 'value': 'acceleration_layer_0 * acceleration_travel / acceleration_print'}, 'acceleration_print_layer_0': {'default_value': 3000, 'value': 'acceleration_layer_0'}}, 'default_value': 3000, 'value': 'acceleration_print'}, 'max_feedrate_z_override': {'default_value': 0}, 'skirt_brim_speed': {'default_value': 30, 'value': 'speed_layer_0'}, 'jerk_layer_0': {'children': {'jerk_travel_layer_0': {'default_value': 20, 'value': 'jerk_layer_0 * jerk_travel / jerk_print'}, 'jerk_print_layer_0': {'default_value': 20, 'value': 'jerk_layer_0'}}, 'default_value': 20, 'value': 'jerk_print'}, 'speed_slowdown_layers': {'default_value': 2}, 'speed_travel': {'default_value': 120, 'value': 'speed_print if magic_spiralize else 120'}, 'jerk_travel': {'default_value': 30, 'value': 'jerk_print if magic_spiralize else 30'}, 'speed_layer_0': {'children': {'speed_print_layer_0': {'default_value': 30, 'value': 'speed_layer_0'}, 'speed_travel_layer_0': {'default_value': 60, 'value': 'speed_layer_0 * speed_travel / speed_print'}}, 'default_value': 30, 'value': 'speed_print * 30 / 60'}, 'speed_equalize_flow_max': {'default_value': 150}, 'acceleration_enabled': {'default_value': False}}, 'acceleration_support_infill': {'default_value': 3000, 'value': 'acceleration_support'}, 'jerk_wall_x': {'default_value': 20, 'value': 'jerk_wall'}, 'jerk_infill': {'default_value': 20, 'value': 'jerk_print'}, 'jerk_skirt_brim': {'default_value': 20, 'value': 'jerk_layer_0'}, 'acceleration_skirt_brim': {'default_value': 3000, 'value': 'acceleration_layer_0'}, 'jerk_support_roof': {'default_value': 20, 'value': "extruderValue(support_roof_extruder_nr, 'jerk_support_interface')"}, 'skirt_brim_speed': {'default_value': 30, 'value': 'speed_layer_0'}, 'jerk_support_bottom': {'default_value': 20, 'value': "extruderValue(support_roof_extruder_nr, 'jerk_support_interface')"}, 'os': <module 'os' from '/usr/lib/python3.5/os.py'>, '__file__': 'curaEngineSettings.py', 'jerk_print_layer_0': {'default_value': 20, 'value': 'jerk_layer_0'}, '__cached__': None, 'speed_support_interface': {'default_value': 40, 'value': 'speed_support / 1.5'}, 'jerk_wall_0': {'default_value': 20, 'value': 'jerk_wall'}, 'speed_print_layer_0': {'default_value': 30, 'value': 'speed_layer_0'}, 'jerk_roofing': {'default_value': 20, 'value': 'jerk_topbottom'}, '__doc__': None, 'acceleration_support_interface': {'default_value': 3000, 'value': 'acceleration_support'}, '__package__': None, 'speed_support_roof': {'default_value': 40, 'value': "extruderValue(support_roof_extruder_nr, 'speed_support_interface')"}, 'speed_topbottom': {'default_value': 30, 'value': 'speed_print / 2'}, 'acceleration_support': {'default_value': 3000, 'value': 'acceleration_print'}, 'jerk_layer_0': {'default_value': 20, 'value': 'jerk_print'}, 'speed_slowdown_layers': {'default_value': 2, 'value': None}, 'jerk_print': {'default_value': 20, 'value': None}, 'speed_layer_0': {'default_value': 30, 'value': 'speed_print * 30 / 60'}, 'speed_roofing': {'default_value': 25, 'value': 'speed_topbottom'}, 'speed_equalize_flow_max': {'default_value': 150, 'value': None}, 'speed_support_bottom': {'default_value': 40, 'value': "extruderValue(support_bottom_extruder_nr, 'speed_support_interface')"}, 'acceleration_enabled': {'default_value': False, 'value': None}, 'speed_support': {'default_value': 60, 'value': 'speed_print'}, 'acceleration_layer_0': {'default_value': 3000, 'value': 'acceleration_print'}, '__spec__': None, 'speed_infill': {'default_value': 60, 'value': 'speed_print'}, 'acceleration_print': {'default_value': 3000, 'value': None}, 'max_feedrate_z_override': {'default_value': 0, 'value': None}, 'speed_wall_0': {'default_value': 30, 'value': 'speed_wall'}, 'speed_wall': {'default_value': 30, 'value': 'speed_print / 2'}, 'acceleration_travel': {'default_value': 5000, 'value': 'acceleration_print if magic_spiralize else 5000'}, 'jerk_support': {'default_value': 20, 'value': 'jerk_print'}, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f50de023588>, '__builtins__': <module 'builtins' (built-in)>, 'speed_equalize_flow_enabled': {'default_value': False, 'value': None}, 'jerk_travel': {'default_value': 30, 'value': 'jerk_print if magic_spiralize else 30'}, 'acceleration_roofing': {'default_value': 3000, 'value': 'acceleration_topbottom'}, 'acceleration_wall_x': {'default_value': 3000, 'value': 'acceleration_wall'}, 'acceleration_wall_0': {'default_value': 3000, 'value': 'acceleration_wall'}, 'filename': 'speed.json', 'jerk_support_infill': {'default_value': 20, 'value': 'jerk_support'}, 'acceleration_topbottom': {'default_value': 3000, 'value': 'acceleration_print'}, 'jerk_support_interface': {'default_value': 20, 'value': 'jerk_support'}}

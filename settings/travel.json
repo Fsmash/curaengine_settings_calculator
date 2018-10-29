@@ -1,0 +1,53 @@
+{
+    "travel":
+    {
+        "children":
+        {
+            "retraction_combing":
+            {
+                "default_value": "all"
+            },
+            "travel_retract_before_outer_wall":
+            {
+                "default_value": false
+            },
+            "travel_avoid_other_parts":
+            {
+                "default_value": true
+            },
+            "travel_avoid_distance":
+            {
+                "default_value": 0.625,
+                "value": "machine_nozzle_tip_outer_diameter / 2 * 1.25"
+            },
+            "start_layers_at_same_position":
+            {
+                "default_value": false
+            },
+            "layer_start_x":
+            {
+                "default_value": 0.0
+            },
+            "layer_start_y":
+            {
+                "default_value": 0.0
+            },
+            "retraction_hop_enabled": 
+            {
+                "default_value": false
+            },
+            "retraction_hop_only_when_collides": 
+            {
+                "default_value": false
+            },
+            "retraction_hop": 
+            {
+                "default_value": 1
+            },
+            "retraction_hop_after_extruder_switch": 
+            {
+                "default_value": true
+            }
+        }
+    }
+}

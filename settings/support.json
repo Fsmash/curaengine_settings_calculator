@@ -1,0 +1,236 @@
+{
+	"support":
+    {
+	    "children":
+	    {
+	        "support_enable":
+	        {
+	            "default_value": false
+	        },
+	        "support_extruder_nr":
+	        {
+	            "default_value": "0",
+	            "children": {
+	                "support_infill_extruder_nr":
+	                {
+	                    "default_value": "0",
+	                    "value": "support_extruder_nr"
+	                },
+	                "support_extruder_nr_layer_0":
+	                {
+	                    "default_value": "0",
+	                    "value": "support_extruder_nr"
+	                },
+	                "support_interface_extruder_nr":
+	                {
+	                    "default_value": "0",
+	                    "value": "support_extruder_nr",
+	                    "children":
+	                    {
+	                        "support_roof_extruder_nr":
+	                        {
+	                            "default_value": "0",
+	                            "value": "support_interface_extruder_nr"
+	                        },
+	                        "support_bottom_extruder_nr":
+	                        {
+	                            "default_value": "0",
+	                            "value": "support_interface_extruder_nr"
+	                        }
+	                    }
+	                }
+	            }
+	        },
+	        "support_type":
+	        {
+	            "default_value": "everywhere"
+	        },
+	        "support_angle":
+	        {
+	            "default_value": 50
+	        },
+	        "support_pattern":
+	        {
+	            "default_value": "zigzag"
+	        },
+	        "support_connect_zigzags":
+	        {
+	            "default_value": true
+	        },
+	        "support_infill_rate":
+	        {
+	            "default_value": 15,
+	            "children":
+	            {
+	                "support_line_distance":
+	                {
+	                    "default_value": 2.66,
+	                    "value": "(support_line_width * 100) / support_infill_rate * (2 if support_pattern == 'grid' else (3 if support_pattern == 'triangles' else 1))"
+	                }
+	            }
+	        },
+	        "support_z_distance":
+	        {
+	            "default_value": 0.1,
+	            "children":
+	            {
+	                "support_top_distance":
+	                {
+	                    "default_value": 0.1,
+	                    "value": "extruderValue(support_roof_extruder_nr if support_roof_enable else support_infill_extruder_nr, 'support_z_distance')"
+	                },
+	                "support_bottom_distance":
+	                {
+	                    "default_value": 0.1,
+	                    "value": "extruderValue(support_bottom_extruder_nr if support_bottom_enable else support_infill_extruder_nr, 'support_z_distance') if support_type == 'everywhere' else 0"
+	                }
+	            }
+	        },
+	        "support_xy_distance":
+	        {
+	            "default_value": 0.7
+	        },
+	        "support_xy_overrides_z":
+	        {
+	            "default_value": "z_overrides_xy"
+	        },
+	        "support_xy_distance_overhang":
+	        {
+	            "default_value": 0.2,
+	            "value": "machine_nozzle_size / 2"
+	        },
+	        "support_bottom_stair_step_height":
+	        {
+	            "default_value": 0.3
+	        },
+	        "support_bottom_stair_step_width":
+	        {
+	            "default_value": 5.0
+	        },
+	        "support_join_distance":
+	        {
+	            "default_value": 2.0
+	        },
+	        "support_offset":
+	        {
+	            "default_value": 0.2
+	        },
+	        "support_infill_sparse_thickness":
+	        {
+	            "default_value": 0.1,
+	            "value": "resolveOrValue('layer_height')"
+	        },
+	        "gradual_support_infill_steps":
+	        {
+	            "default_value": 0
+	        },
+	        "gradual_support_infill_step_height":
+	        {
+	            "default_value": 1
+	        },
+	        "support_interface_enable":
+	        {
+	            "default_value": false,
+	            "children":
+	            {
+	                "support_roof_enable":
+	                {
+	                    "default_value": false,
+	                    "value": "extruderValue(support_roof_extruder_nr, 'support_interface_enable')"
+	                },
+	                "support_bottom_enable":
+	                {
+	                    "default_value": false,
+	                    "value": "extruderValue(support_bottom_extruder_nr, 'support_interface_enable')"
+	                }
+	            }
+	        },
+	        "support_interface_height":
+	        {
+	            "default_value": 1,
+	            "children":
+	            {
+	                "support_roof_height":
+	                {
+	                    "default_value": 1,
+	                    "value": "extruderValue(support_roof_extruder_nr, 'support_interface_height')"
+	                },
+	                "support_bottom_height":
+	                {
+	                    "default_value": 1,
+	                    "value": "extruderValue(support_bottom_extruder_nr, 'support_interface_height')"
+	                }
+	            }
+	        },
+	        "support_interface_skip_height": {
+	            "default_value": 0.3
+	        },
+	        "support_interface_density":
+	        {
+	            "default_value": 100,
+	            "children":
+	            {
+	                "support_roof_density":
+	                {
+	                    "default_value": 100,
+	                    "value": "extruderValue(support_roof_extruder_nr, 'support_interface_density')",
+	                    "children":
+	                    {
+	                        "support_roof_line_distance":
+	                        {
+	                            "default_value": 0.4,
+	                            "value": "0 if support_roof_density == 0 else (support_roof_line_width * 100) / support_roof_density * (2 if support_roof_pattern == 'grid' else (3 if support_roof_pattern == 'triangles' else 1))"
+	                        }
+	                    }
+	                },
+	                "support_bottom_density":
+	                {
+	                    "default_value": 100,
+	                    "value": "extruderValue(support_bottom_extruder_nr, 'support_interface_density')",
+	                    "children":
+	                    {
+	                        "support_bottom_line_distance":
+	                        {
+	                            "default_value": 0.4,
+	                            "value": "0 if support_bottom_density == 0 else (support_bottom_line_width * 100) / support_bottom_density * (2 if support_bottom_pattern == 'grid' else (3 if support_bottom_pattern == 'triangles' else 1))"
+	                        }
+	                    }
+	                }
+	            }
+	        },
+	        "support_interface_pattern":
+	        {
+	            "default_value": "concentric",
+	            "children":
+	            {
+	                "support_roof_pattern":
+	                {
+	                    "default_value": "concentric",
+	                    "value": "extruderValue(support_roof_extruder_nr, 'support_interface_pattern')"
+	                },
+	                "support_bottom_pattern":
+	                {
+	                    "default_value": "concentric",
+	                    "value": "extruderValue(support_bottom_extruder_nr, 'support_interface_pattern')"
+	                }
+	            }
+	        },
+	        "support_use_towers":
+	        {
+	            "default_value": true
+	        },
+	        "support_tower_diameter":
+	        {
+	            "default_value": 3.0
+	        },
+	        "support_minimal_diameter":
+	        {
+	            "default_value": 3.0
+	        },
+	        "support_tower_roof_angle":
+	        {
+	            "default_value": 65
+	        }
+	    }
+	}
+}

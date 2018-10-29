@@ -1,0 +1,37 @@
+{
+	"meshfix":
+	{
+	    "children":
+	    {
+	        "meshfix_union_all":
+	        {
+	            "default_value": true
+	        },
+	        "meshfix_union_all_remove_holes":
+	        {
+	            "default_value": false
+	        },
+	        "meshfix_extensive_stitching":
+	        {
+	            "default_value": false
+	        },
+	        "meshfix_keep_open_polygons":
+	        {
+	            "default_value": false
+	        },
+	        "multiple_mesh_overlap":
+	        {
+	            "default_value": 0.15
+	        },
+	        "carve_multiple_volumes":
+	        {
+	            "default_value": true,
+	            "value": "machine_extruder_count > 1"
+	        },
+	        "alternate_carve_order":
+	        {
+	            "default_value": true
+	        }
+	    }
+	}
+}
