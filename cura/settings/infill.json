@@ -1,0 +1,142 @@
+{
+	"infill":
+	{
+	    "children":
+	    {
+	        "infill_extruder_nr":
+	        {
+	            "default_value": "-1"
+	        },
+	        "infill_sparse_density":
+	        {
+	            "default_value": 20,
+	            "children":
+	            {
+	                "infill_line_distance":
+	                {
+	                    "default_value": 2,
+	                    "value": "0 if infill_sparse_density == 0 else (infill_line_width * 100) / infill_sparse_density * (2 if infill_pattern == 'grid' else (3 if infill_pattern == 'triangles' or infill_pattern == 'cubic' or infill_pattern == 'cubicsubdiv' else (2 if infill_pattern == 'tetrahedral' or infill_pattern == 'quarter_cubic' else (1 if infill_pattern == 'cross' or infill_pattern == 'cross_3d' else 1))))"
+	                }
+	            }
+	        },
+	        "infill_pattern":
+	        {
+	            "default_value": "grid",
+	            "value": "'lines' if infill_sparse_density > 25 else 'grid'"
+	        },
+	        "zig_zaggify_infill":
+	        {
+	            "default_value": true
+	        },
+	        "infill_angles":
+	        {
+	            "default_value": "[ ]"
+	        },
+	        "sub_div_rad_add":
+	        {
+	            "default_value": 0.4,
+	            "value": "wall_line_width_x"
+	        },
+	        "infill_overlap":
+	        {
+	            "default_value": 10,
+	            "value": "10 if infill_sparse_density < 95 and infill_pattern != 'concentric' else 0",
+	            "children":
+	            {
+	                "infill_overlap_mm":
+	                {
+	                    "default_value": 0.04,
+	                    "value": "0.5 * ( infill_line_width + (wall_line_width_x if wall_line_count > 1 else wall_line_width_0) ) * infill_overlap / 100 if infill_sparse_density < 95 and infill_pattern != 'concentric' else 0"
+	                }
+	            }
+	        },
+	        "skin_overlap":
+	        {
+	            "default_value": 5,
+	            "value": "5 if top_bottom_pattern != 'concentric' else 0",
+	            "children":
+	            {
+	                "skin_overlap_mm":
+	                {
+	                    "default_value": 0.02,
+	                    "value": "0.5 * ( skin_line_width + (wall_line_width_x if wall_line_count > 1 else wall_line_width_0) ) * skin_overlap / 100 if top_bottom_pattern != 'concentric' else 0"
+	                }
+	            }
+	        },
+	        "infill_wipe_dist":
+	        {
+	            "default_value": 0.04,
+	            "value": "wall_line_width_0 / 4 if wall_line_count == 1 else wall_line_width_x / 4"
+	        },
+	        "infill_sparse_thickness":
+	        {
+	            "default_value": 0.1,
+	            "value": "resolveOrValue('layer_height')"
+	        },
+	        "gradual_infill_steps":
+	        {
+	            "default_value": 0
+	        },
+	        "gradual_infill_step_height":
+	        {
+	            "default_value": 1.5
+	        },
+	        "infill_before_walls":
+	        {
+	            "default_value": true
+	        },
+	        "min_infill_area":
+	        {
+	            "default_value": 0
+	        },
+	        "skin_preshrink":
+	        {
+	            "default_value": 0,
+	            "value": "wall_line_width_0 + (wall_line_count - 1) * wall_line_width_x",
+	            "children":
+	            {
+	                "top_skin_preshrink":
+	                {
+	                    "default_value": 0,
+	                    "value": "skin_preshrink"
+	                },
+	                "bottom_skin_preshrink":
+	                {
+	                    "default_value": 0,
+	                    "value": "skin_preshrink"
+	                }
+	            }
+	        },
+	        "expand_skins_expand_distance":
+	        {
+	            "default_value": 2.8,
+	            "value": "wall_line_width_0 + (wall_line_count - 1) * wall_line_width_x",
+	            "children":
+	            {
+	                "top_skin_expand_distance":
+	                {
+	                    "default_value": 2.8,
+	                    "value": "expand_skins_expand_distance"
+	                },
+	                "bottom_skin_expand_distance":
+	                {
+	                    "default_value": 2.8,
+	                    "value": "expand_skins_expand_distance"
+	                }
+	            }
+	        },
+	        "max_skin_angle_for_expansion":
+	        {
+	            "default_value": 90,
+	            "children":
+	            {
+	                "min_skin_width_for_expansion":
+	                {
+	                    "default_value": 2.24,
+	                    "value": "top_layers * layer_height / math.tan(math.radians(max_skin_angle_for_expansion))"
+	                }
+	            }
+	        }
+	    }
+	}
+}

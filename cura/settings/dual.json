@@ -1,0 +1,67 @@
+{
+	"dual":
+	{
+	    "children":
+	    {
+	        "prime_tower_enable":
+	        {
+	            "default_value": false
+	        },
+	        "prime_tower_size":
+	        {
+	            "default_value": 20
+	        },
+	        "prime_tower_min_volume":
+	        {
+	            "default_value": 10,
+	            "children":
+	            {
+	                "prime_tower_wall_thickness":
+	                {
+	                    "default_value": 2,
+	                    "value": "round(max(2 * prime_tower_line_width, 0.5 * (prime_tower_size - math.sqrt(max(0, prime_tower_size ** 2 - prime_tower_min_volume / layer_height)))), 3)"
+	                }
+	            }
+	        },
+	        "prime_tower_position_x":
+	        {
+	            "default_value": 200,
+	            "value": "machine_width - max(extruderValue(adhesion_extruder_nr, 'brim_width') * extruderValue(adhesion_extruder_nr, 'initial_layer_line_width_factor') / 100 if adhesion_type == 'brim' else (extruderValue(adhesion_extruder_nr, 'raft_margin') if adhesion_type == 'raft' else (extruderValue(adhesion_extruder_nr, 'skirt_gap') if adhesion_type == 'skirt' else 0)), max(extruderValues('travel_avoid_distance'))) - max(extruderValues('support_offset')) - sum(extruderValues('skirt_brim_line_width')) * extruderValue(adhesion_extruder_nr, 'initial_layer_line_width_factor') / 100 - 1"
+	        },
+	        "prime_tower_position_y":
+	        {
+	            "default_value": 200,
+	            "value": "machine_depth - prime_tower_size - max(extruderValue(adhesion_extruder_nr, 'brim_width') * extruderValue(adhesion_extruder_nr, 'initial_layer_line_width_factor') / 100 if adhesion_type == 'brim' else (extruderValue(adhesion_extruder_nr, 'raft_margin') if adhesion_type == 'raft' else (extruderValue(adhesion_extruder_nr, 'skirt_gap') if adhesion_type == 'skirt' else 0)), max(extruderValues('travel_avoid_distance'))) - max(extruderValues('support_offset')) - sum(extruderValues('skirt_brim_line_width')) * extruderValue(adhesion_extruder_nr, 'initial_layer_line_width_factor') / 100 - 1"
+	        },
+	        "prime_tower_flow":
+	        {
+	            "default_value": 100,
+	            "value": "material_flow"
+	        },
+	        "prime_tower_wipe_enabled":
+	        {
+	            "default_value": true
+	        },
+	        "dual_pre_wipe":
+	        {
+	            "default_value": true
+	        },
+	        "prime_tower_purge_volume":
+	        {
+	            "default_value": 0
+	        },
+	        "ooze_shield_enabled":
+	        {
+	            "default_value": false
+	        },
+	        "ooze_shield_angle":
+	        {
+	            "default_value": 60
+	        },
+	        "ooze_shield_dist":
+	        {
+	            "default_value": 2
+	        }
+	    }
+	}
+}

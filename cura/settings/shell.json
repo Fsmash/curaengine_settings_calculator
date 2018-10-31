@@ -1,0 +1,178 @@
+{
+	"shell":
+	{
+	    "children":
+	    {
+	        "wall_0_extruder_nr":
+	        {
+	            "default_value": "-1"
+	        },
+	        "wall_x_extruder_nr":
+	        {
+	            "default_value": "-1"
+	        },
+	        "wall_thickness":
+	        {
+	            "default_value": 0.8,
+	            "children":
+	            {
+	                "wall_line_count":
+	                {
+	                    "default_value": 2,
+	                    "value": "1 if magic_spiralize else max(1, round((wall_thickness - wall_line_width_0) / wall_line_width_x) + 1) if wall_thickness != 0 else 0"
+	                }
+	            }
+	        },
+	        "wall_0_wipe_dist":
+	        {
+	            "default_value": 0.2,
+	            "value": "machine_nozzle_size / 2"
+	        },
+	        "roofing_extruder_nr":
+	        {
+	            "default_value": "-1",
+	            "value": "top_bottom_extruder_nr"
+	        },
+	        "roofing_layer_count":
+	        {
+	            "default_value": 0,
+	            "value": "0"
+	        },
+	        "roofing_pattern":
+	        {
+	            "default_value": "lines",
+	            "value": "top_bottom_pattern"
+	        },
+	        "roofing_angles":
+	        {
+	            "default_value": "[ ]",
+	            "value": "skin_angles"
+	        },
+	        "top_bottom_extruder_nr":
+	        {
+	            "default_value": "-1"
+	        },
+	        "top_bottom_thickness":
+	        {
+	            "default_value": 0.8,
+	            "children":
+	            {
+	                "top_thickness":
+	                {
+	                    "default_value": 0.8,
+	                    "value": "top_bottom_thickness",
+	                    "children":
+	                    {
+	                        "top_layers":
+	                        {
+	                            "default_value": 8,
+	                            "value": "0 if infill_sparse_density == 100 else math.ceil(round(top_thickness / resolveOrValue('layer_height'), 4))"
+	                        }
+	                    }
+	                },
+	                "bottom_thickness":
+	                {
+	                    "default_value": 0.6,
+	                    "value": "top_bottom_thickness",
+	                    "children":
+	                    {
+	                        "bottom_layers":
+	                        {
+	                            "default_value": 6,
+	                            "value": "999999 if infill_sparse_density == 100 else math.ceil(round(bottom_thickness / resolveOrValue('layer_height'), 4))"
+	                        }
+	                    }
+	                }
+	            }
+	        },
+	        "top_bottom_pattern":
+	        {
+	            "default_value": "lines"
+	        },
+	        "top_bottom_pattern_0":
+	        {
+	            "default_value": "lines",
+	            "value": "top_bottom_pattern"
+	        },
+	        "skin_angles":
+	        {
+	            "default_value": "[0, 90]"
+	        },
+	        "wall_0_inset":
+	        {
+	            "default_value": 0.0,
+	            "value": "(machine_nozzle_size - wall_line_width_0) / 2 if (wall_line_width_0 < machine_nozzle_size and not outer_inset_first) else 0"
+	        },
+	        "outer_inset_first":
+	        {
+	            "default_value": false
+	        },
+	        "alternate_extra_perimeter":
+	        {
+	            "default_value": false
+	        },
+	        "travel_compensate_overlapping_walls_enabled":
+	        {
+	            "default_value": true,
+	            "children":
+	            {
+	                "travel_compensate_overlapping_walls_0_enabled":
+	                {
+	                    "default_value": true,
+	                    "value": "travel_compensate_overlapping_walls_enabled"
+	                },
+	                "travel_compensate_overlapping_walls_x_enabled":
+	                {
+	                    "default_value": true,
+	                    "value": "travel_compensate_overlapping_walls_enabled"
+	                }
+	            }
+	        },
+	        "fill_perimeter_gaps": {
+	            "default_value": "everywhere"
+	        },
+	        "fill_outline_gaps": {
+	            "default_value": false
+	        },
+	        "xy_offset":
+	        {
+	            "default_value": 0
+	        },
+	        "xy_offset_layer_0":
+	        {
+	            "default_value": 0,
+	            "value": "xy_offset"
+	        },
+	        "z_seam_type":
+	        {
+	            "default_value": "sharpest_corner"
+	        },
+	        "z_seam_x":
+	        {
+	            "default_value": 100.0,
+	            "value": "machine_width / 2"
+	        },
+	        "z_seam_y":
+	        {
+	            "default_value": 100.0,
+	            "value": "machine_depth * 3"
+	        },
+	        "z_seam_corner":
+	        {
+	            "default_value": "z_seam_corner_inner"
+	        },
+	        "z_seam_relative":
+	        {
+	            "default_value": false
+	        },
+	        "skin_no_small_gaps_heuristic":
+	        {
+	            "default_value": true
+	        },
+	        "skin_outline_count":
+	        {
+	            "default_value": 1
+	        }
+	    }
+	}
+}

@@ -1,0 +1,294 @@
+{
+	"experimental":
+	{
+	    "children":
+	    {
+	        "optimize_wall_printing_order":
+	        {
+	            "default_value": false
+	        },
+	        "support_skip_some_zags": {
+	            "default_value": false,
+	            "children": {
+	                "support_skip_zag_per_mm": {
+	                    "default_value": 20,
+	                    "children": {
+	                        "support_zag_skip_count": {
+	                            "default_value": 5,
+	                            "value": "round(support_skip_zag_per_mm / support_line_distance)"
+	                        }
+	                    }
+	                }
+	            }
+	        },
+	        "draft_shield_enabled":
+	        {
+	            "default_value": false
+	        },
+	        "draft_shield_dist":
+	        {
+	            "default_value": 10
+	        },
+	        "draft_shield_height_limitation":
+	        {
+	            "default_value": "full"
+	        },
+	        "draft_shield_height":
+	        {
+	            "default_value": 10,
+	            "value": "10"
+	        },
+	        "conical_overhang_enabled":
+	        {
+	            "default_value": false
+	        },
+	        "conical_overhang_angle":
+	        {
+	            "default_value": 50
+	        },
+	        "coasting_enable":
+	        {
+	            "default_value": false
+	        },
+	        "coasting_volume":
+	        {
+	            "default_value": 0.064
+	        },
+	        "coasting_min_volume":
+	        {
+	            "default_value": 0.8
+	        },
+	        "coasting_speed":
+	        {
+	            "default_value": 90
+	        },
+	        "skin_alternate_rotation":
+	        {
+	            "default_value": false
+	        },
+	        "cross_infill_pocket_size":
+	        {
+	            "default_value": 2.0,
+	            "value": "infill_line_distance"
+	        },
+	        "cross_infill_apply_pockets_alternatingly":
+	        {
+	            "default_value": true
+	        },
+	        "spaghetti_infill_enabled":
+	        {
+	            "default_value": false
+	        },
+	        "spaghetti_infill_stepped":
+	        {
+	            "default_value": true
+	        },
+	        "spaghetti_max_infill_angle":
+	        {
+	            "default_value": 10
+	        },
+	        "spaghetti_max_height":
+	        {
+	            "default_value": 2.0
+	        },
+	        "spaghetti_inset":
+	        {
+	            "default_value": 0.2
+	        },
+	        "spaghetti_flow":
+	        {
+	            "default_value": 20
+	        },
+	        "spaghetti_infill_extra_volume":
+	        {
+	            "default_value": 0
+	        },
+	        "support_conical_enabled":
+	        {
+	            "default_value": false
+	        },
+	        "support_conical_angle":
+	        {
+	            "default_value": 30
+	        },
+	        "support_conical_min_width":
+	        {
+	            "default_value": 5.0
+	        },
+	        "infill_hollow":
+	        {
+	            "default_value": false
+	        },
+	        "magic_fuzzy_skin_enabled":
+	        {
+	            "default_value": false
+	        },
+	        "magic_fuzzy_skin_thickness":
+	        {
+	            "default_value": 0.3
+	        },
+	        "magic_fuzzy_skin_point_density":
+	        {
+	            "default_value": 1.25,
+	            "children":
+	            {
+	                "magic_fuzzy_skin_point_dist":
+	                {
+	                    "default_value": 0.8,
+	                    "value": "10000 if magic_fuzzy_skin_point_density == 0 else 1 / magic_fuzzy_skin_point_density"
+	                }
+	            }
+	        },
+	        "wireframe_enabled":
+	        {
+	            "default_value": false
+	        },
+	        "wireframe_height":
+	        {
+	            "default_value": 3,
+	            "value": "machine_nozzle_head_distance"
+	        },
+	        "wireframe_roof_inset":
+	        {
+	            "default_value": 3,
+	            "value": "wireframe_height"
+	        },
+	        "wireframe_printspeed":
+	        {
+	            "default_value": 5,
+	            "children":
+	            {
+	                "wireframe_printspeed_bottom":
+	                {
+	                    "default_value": 5,
+	                    "value": "wireframe_printspeed"
+	                },
+	                "wireframe_printspeed_up":
+	                {
+	                    "default_value": 5,
+	                    "value": "wireframe_printspeed"
+	                },
+	                "wireframe_printspeed_down":
+	                {
+	                    "default_value": 5,
+	                    "value": "wireframe_printspeed"
+	                },
+	                "wireframe_printspeed_flat":
+	                {
+	                    "default_value": 5,
+	                    "value": "wireframe_printspeed"
+	                }
+	            }
+	        },
+	        "wireframe_flow":
+	        {
+	            "default_value": 100,
+	            "children":
+	            {
+	                "wireframe_flow_connection":
+	                {
+	                    "default_value": 100,
+	                    "value": "wireframe_flow"
+	                },
+	                "wireframe_flow_flat":
+	                {
+	                    "default_value": 100,
+	                    "value": "wireframe_flow"
+	                }
+	            }
+	        },
+	        "wireframe_top_delay":
+	        {
+	            "default_value": 0
+	        },
+	        "wireframe_bottom_delay":
+	        {
+	            "default_value": 0
+	        },
+	        "wireframe_flat_delay":
+	        {
+	            "default_value": 0.1
+	        },
+	        "wireframe_up_half_speed":
+	        {
+	            "default_value": 0.3
+	        },
+	        "wireframe_top_jump":
+	        {
+	            "default_value": 0.6
+	        },
+	        "wireframe_fall_down":
+	        {
+	            "default_value": 0.5
+	        },
+	        "wireframe_drag_along":
+	        {
+	            "default_value": 0.6
+	        },
+	        "wireframe_strategy":
+	        {
+	            "default_value": "compensate"
+	        },
+	        "wireframe_straight_before_down":
+	        {
+	            "default_value": 20
+	        },
+	        "wireframe_roof_fall_down":
+	        {
+	            "default_value": 2
+	        },
+	        "wireframe_roof_drag_along":
+	        {
+	            "default_value": 0.8
+	        },
+	        "wireframe_roof_outer_delay":
+	        {
+	            "default_value": 0.2
+	        },
+	        "wireframe_nozzle_clearance":
+	        {
+	            "default_value": 1
+	        },
+	        "ironing_enabled":
+	        {
+	            "default_value": false
+	        },
+	        "ironing_only_highest_layer":
+	        {
+	            "default_value": false
+	        },
+	        "ironing_pattern":
+	        {
+	            "default_value": "zigzag"
+	        },
+	        "ironing_line_spacing":
+	        {
+	            "default_value": 0.1
+	        },
+	        "ironing_flow":
+	        {
+	            "default_value": 10.0
+	        },
+	        "ironing_inset":
+	        {
+	            "default_value": 0.35,
+	            "value": "wall_line_width_0 / 2"
+	        },
+	        "speed_ironing":
+	        {
+	            "default_value": 20.0,
+	            "value": "speed_topbottom * 20 / 30"
+	        },
+	        "acceleration_ironing":
+	        {
+	            "default_value": 3000,
+	            "value": "acceleration_topbottom"
+	        },
+	        "jerk_ironing":
+	        {
+	            "default_value": 20,
+	            "value": "jerk_topbottom"
+	        }
+	    }
+	}
+}

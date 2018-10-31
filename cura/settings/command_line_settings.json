@@ -1,0 +1,22 @@
+{
+    "command_line_settings": 
+    {
+        "children": {
+            "center_object": {
+                "default_value": false
+            },
+            "mesh_position_x": {
+                "default_value": 0
+            },
+            "mesh_position_y": {
+                "default_value": 0
+            },
+            "mesh_position_z": {
+                "default_value": 0
+            },
+            "mesh_rotation_matrix": {
+                "default_value": "[[1,0,0], [0,1,0], [0,0,1]]"
+            }
+        }
+    }
+}
